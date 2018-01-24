@@ -16,6 +16,7 @@ AIS32-0.1.7.6,"AIS32-0.1.7.6",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.
 AIS32-0.1.7.7,"AIS32-0.1.7.7",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.7.7","AIS32",,false,
 AIS32-0.1.7.8,"AIS32-0.1.7.8",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.7.8","AIS32",,false,
 SBR-001002,"Always Off Bit",false,"False",,,,,,,"always off",,,,false,,"SBR",,false,
+F32-000007,"Ambient Temp",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 SBR-001017,"Array out of range error",false,"False",,,,,,,"On if an array index is outside the range of the array",,,,false,,"SBR",,false,
 SWR-001514,"Array range error rung location",false,"0",,,,,,,"Rung Number in which ""Array out of range error"" occurred",,,,false,,"SWR",,false,
 SWR-001513,"Array range error task location",false,"0",,,,,,,"Task Number in which ""Array out of range error"" occurred",,,,false,,"SWR",,false,
@@ -135,11 +136,11 @@ DO-0.1.4.9,"DO-0.1.4.9",false,"False",,,,,,,,false,false,"False",false,"DO-0.1.4
 AIS32-0.1.8.12,"DPT 001-ACC1 DPT",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.8.12","AIS32",,false,
 AIS32-0.1.8.13,"DPT 002-ACC2 DPT",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.8.13","AIS32",,false,
 AIS32-0.1.8.14,"DPT 003-Heater DPT",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.8.14","AIS32",,false,
-S32-000006,"Downstream EXP ASP",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-S32-000009,"Downstream EXP ASP Dead Zone",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-AR1S32-000001,"Downstream EXP ASP Limits()",FALSE,,,,,,2,,,,,,false,,"AR1S32",,
-AR1S32-000001(1),"Downstream EXP ASP Limits(1)",FALSE,"0",,,,,2,,,,,,false,,"AR1S32",,false
-AR1S32-000001(2),"Downstream EXP ASP Limits(2)",FALSE,"0",,,,,,,,,,,false,,"AR1S32",,false
+F32-000003,"Downstream EXP ASP",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000004,"Downstream EXP ASP Dead Zone",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+AR1F32-000001,"Downstream EXP ASP Limits()",FALSE,,,,,,2,,,,,,false,,"AR1F32",,
+AR1F32-000001(1),"Downstream EXP ASP Limits(1)",FALSE,"0.0",,,,,2,,,,,,false,,"AR1F32",,false
+AR1F32-000001(2),"Downstream EXP ASP Limits(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
 SWR-001526,"Ethernet Speed [External]",false,"0",,,,,,,"""Ethernet"" port speed (Ethernet 10 or 100)",,,,false,,"SWR",,false,
 SWR-001527,"Ethernet Speed [Internal]",false,"0",,,,,,,"""Remote I/O"" port speed (Ethernet 10 or 100)",,,,false,,"SWR",,false,
 SBR-001004,"Every Other Scan Bit",false,"False",,,,,,,"toggles at the start of each scan",,,,false,,"SBR",,false,
@@ -334,11 +335,11 @@ MST-0.1.8.93,"MST-0.1.8.93",false,"False",,,,,,,"Over Range Error (5)",false,fal
 MST-0.1.8.94,"MST-0.1.8.94",false,"False",,,,,,,"Over Range Error (6)",false,false,"False",false,"MST-0.1.8.94","MST",,false,
 MST-0.1.8.95,"MST-0.1.8.95",false,"False",,,,,,,"Over Range Error (7)",false,false,"False",false,"MST-0.1.8.95","MST",,false,
 MST-0.1.8.96,"MST-0.1.8.96",false,"False",,,,,,,"Over Range Error (8)",false,false,"False",false,"MST-0.1.8.96","MST",,false,
-S32-000005,"Mass Inventory ASP",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-S32-000016,"Mass Inventory ASP Dead Zone",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-AR1S32-000002,"Mass Inventory ASP Limits()",FALSE,,,,,,2,,,,,,false,,"AR1S32",,
-AR1S32-000002(1),"Mass Inventory ASP Limits(1)",FALSE,"0",,,,,2,,,,,,false,,"AR1S32",,false
-AR1S32-000002(2),"Mass Inventory ASP Limits(2)",FALSE,"0",,,,,,,,,,,false,,"AR1S32",,false
+F32-000005,"Mass Inventory ASP",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000006,"Mass Inventory ASP Dead Zone",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+AR1F32-000002,"Mass Inventory ASP Limits()",FALSE,,,,,,2,,,,,,false,,"AR1F32",,
+AR1F32-000002(1),"Mass Inventory ASP Limits(1)",FALSE,"0.0",,,,,2,,,,,,false,,"AR1F32",,false
+AR1F32-000002(2),"Mass Inventory ASP Limits(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
 SBR-001013,"Noncritical Error Bit",false,"False",,,,,,,"On when a noncritical error is active",,,,false,,"SBR",,false,
 SWR-000021,"Noncritical Error Log 01",false,"0",,,,,,,"most recent noncritical error",,,,false,,"SWR",,false,
 SWR-000022,"Noncritical Error Log 02",false,"0",,,,,,,"2nd most recent noncritical error",,,,false,,"SWR",,false,
@@ -410,6 +411,7 @@ SWR-001512,"Program Memory Size",false,"0",,,,,,,"current percentage of CPU memo
 SBRW-001003,"Refresh Critical Error Log",false,"False",,,,,,,"set On to refresh the ""Critical Error Log""",,,,false,,"SBRW",,false,
 SBRW-001004,"Refresh Non-Critical Error Log",false,"False",,,,,,,"set On to refresh the ""Noncritical Error Log""",,,,false,,"SBRW",,false,
 SSTR-000103,"Requested Module Name",false,,,,50,,,,"name of specified module (see ""Identify Module Request bit"")",,,,false,,"SSTR",,false,
+US8-000001,"Screen Input - Amb Temp Choice",true,"0",,,,,,,,false,false,"0",false,,"US8",,false,
 BCD16-000001,"Screen Number",false,"1",,,,,,,,false,false,"0",false,,"BCD16",,false,
 C-000032,"Shutdown-Complete",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000029,"Shutdown-P1-Begin",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
