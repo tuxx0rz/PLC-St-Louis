@@ -444,6 +444,7 @@ SBR-001011,"Switch in Stop Bit",false,"False",,,,,,,"On if CPU Switch is down (S
 C-000037,"Sys Transient Stable 5min",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000019,"Sys Transient Time",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 C-000040,"System Transient Stable",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
+C-000045,"System in Service",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000009,"System-is_on",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000001,"System-uptime",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 AIF32-0.1.1.1,"TE 001-Expander Outlet Temp",false,"0.0",,,,,,,,false,false,"0.0",false,"AIF32-0.1.1.1","AIF32",,false,
