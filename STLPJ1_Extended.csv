@@ -370,12 +370,12 @@ MST-1.1.1.96,"MST-1.1.1.96",false,"False",,,,,,,"Over Range Error (8)",false,fal
 C-000059,"MassInv-Active",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000040,"MassInv-Loop Time",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 C-000055,"MassInv-Loop Timer Complete",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
-S32-000041,"MassInv-Loop Tuned Delay hsec",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-F32-000005,"MassInv-Target Pressure",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000006,"MassInv-Target Pressure DEADZONE",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-AR1F32-000002,"MassInv-Target Pressure Limits()",FALSE,,,,,,2,,,,,,false,,"AR1F32",,
-AR1F32-000002(1),"MassInv-Target Pressure Limits(1)",FALSE,"0.0",,,,,2,,,,,,false,,"AR1F32",,false
-AR1F32-000002(2),"MassInv-Target Pressure Limits(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
+S32-000041,"MassInv-Loop Tuned Delay csec",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
+F32-000005,"MassInv-Target Pressure barg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000006,"MassInv-TargetPrsr DEADZONE barg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+AR1F32-000002,"MassInv-TargetPrsr Limits barg()",FALSE,,,,,,2,,,,,,false,,"AR1F32",,
+AR1F32-000002(1),"MassInv-TargetPrsr Limits barg(1)",FALSE,"0.0",,,,,2,,,,,,false,,"AR1F32",,false
+AR1F32-000002(2),"MassInv-TargetPrsr Limits barg(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
 SBR-001013,"Noncritical Error Bit",false,"False",,,,,,,"On when a noncritical error is active",,,,false,,"SBR",,false,
 SWR-000021,"Noncritical Error Log 01",false,"0",,,,,,,"most recent noncritical error",,,,false,,"SWR",,false,
 SWR-000022,"Noncritical Error Log 02",false,"0",,,,,,,"2nd most recent noncritical error",,,,false,,"SWR",,false,
