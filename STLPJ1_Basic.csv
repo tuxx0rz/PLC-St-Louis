@@ -95,6 +95,7 @@ C-000075,"Compressor-FlowRateInitVerified",false,"False",,,,,,,,false,false,"Fal
 S32-000070,"Compressor-Loop Time",false,"0",,,,,,,,false,false,"0",
 C-000090,"Compressor-Loop Timer Complete",false,"False",,,,,,,,false,false,"False",
 S32-000069,"Compressor-Loop Tuned Delay csec",false,"0",,,,,,,,false,false,"0",
+F32-000054,"Compressor-SUBCOOLING TARGET",false,"0.0",,,,,,,,false,false,"0.0",
 C-000091,"Compressor-Set",false,"False",,,,,,,,false,false,"False",
 SBR-001012,"Critical Error Bit",false,"False",,,,,,,"On when a critical error is active",,,,
 SWR-000001,"Critical Error Log 01",false,"0",,,,,,,"most recent critical error",,,,
