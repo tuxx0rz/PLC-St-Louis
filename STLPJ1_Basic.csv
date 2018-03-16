@@ -631,6 +631,7 @@ C-000046,"Screen Input-Valves in Startup",false,"False",,,,,,,,false,false,"Fals
 C-000077,"Screen-ACCs&Valves&LoadBankConf",false,"False",,,,,,,,false,false,"False",
 S32-000035,"Screen-Base Screen Number",false,"0",,,,,,,,false,false,"0",
 C-000089,"Screen-CheckedAll",false,"False",,,,,,,,false,false,"False",
+C-000121,"Screen-CompressorOn",false,"False",,,,,,,,false,false,"False",
 C-000082,"Screen-ExpanderStartupVisited",false,"False",,,,,,,,false,false,"False",
 C-000087,"Screen-Permissives Err 1",false,"False",,,,,,,,false,false,"False",
 C-000088,"Screen-Permissives Err 2",false,"False",,,,,,,,false,false,"False",
