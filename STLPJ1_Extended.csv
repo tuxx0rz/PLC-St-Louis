@@ -733,4 +733,5 @@ C-000096,"Thar_Compressor.Timeout",false,"False",,,,,,,,false,false,"False",fals
 SWR-001507,"Total Scan Count1",false,"0",,,,,,,"total number of scans since entering Run mode (S32 low word)",,,,false,,"SWR",,false,
 SWR-001508,"Total Scan Count2",false,"0",,,,,,,"total number of scans since entering Run mode (S32 high word)",,,,false,,"SWR",,false,
 SBR-001016,"Watchdog Timeout",false,"False",,,,,,,"On if the actual scan time has exceeded the limit set in the project",,,,false,,"SBR",,false,
+F32-000064,"null",false,"0.0",,,,,,,"junk var",false,false,"0.0",false,,"F32",,false,
 C-000083,"testy",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
