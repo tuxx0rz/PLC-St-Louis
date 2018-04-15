@@ -95,6 +95,7 @@ AR1F32-000005,"Compressor-Flow Set Point Limits()",FALSE,,,,,,2,,,,,,false,,"AR1
 AR1F32-000005(1),"Compressor-Flow Set Point Limits(1)",FALSE,"0.0",,,,,2,,,,,,false,,"AR1F32",,false
 AR1F32-000005(2),"Compressor-Flow Set Point Limits(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
 AOS32-0.1.2.1,"Compressor-Flow Set Point int32",false,"0",,,,,,,,false,false,"0",false,"AOS32-0.1.2.1","AOS32",,false,
+F32-000073,"Compressor-Flow Set Point kg/m",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000009,"Compressor-Flow Set Point kg/s",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 C-000076,"Compressor-Flow Steady",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000068,"Compressor-Flow Steady Time",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
