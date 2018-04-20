@@ -254,6 +254,7 @@ SWR-001501,"Last Scan Interval [x100=usec]",false,"0",,,,,,,"most recent overall
 C-000140,"Log Event Bit",false,"False",,,,,,,,false,false,"False",
 C-000139,"Log Time Done",false,"False",,,,,,,,false,false,"False",
 S32-000082,"Log Timer",false,"0",,,,,,,,false,false,"0",
+S16-000061,"Log_Rate",false,"50",,,,,,,,false,false,"0",
 DO-0.1.9.2,"MOV001_HPAccuIn-Close",false,"False",,,,,,,,false,false,"False",
 DI-0.1.5.7,"MOV001_HPAccuIn-In Remote",false,"False",,,,,,,,false,false,"False",
 DO-0.1.9.1,"MOV001_HPAccuIn-Open",false,"False",,,,,,,,false,false,"False",
