@@ -221,6 +221,7 @@ F32-000003,"ExpBypass-Target Pressure barg",false,"0.0",,,,,,,,false,false,"0.0"
 C-000041,"Expander-Out Temp > 45",false,"False",,,,,,,,false,false,"False",
 C-000042,"Expander-Out Temp > 45 2min",false,"False",,,,,,,,false,false,"False",
 S32-000021,"Expander-Out Temp > 45 Time",false,"0",,,,,,,,false,false,"0",
+C-000147,"Expander-Ready Done",false,"False",,,,,,,,false,false,"False",
 SWR-001509,"Firmware Version",false,"0",,,,,,,"CPU Firmware Version Number in Hex (ex: 0x0102 is version 01.02 or 1.2)",,,,
 SSTR-000104,"Firmware Version[CPU]",false,,,,50,,,,"CPU firmware version viewed as 001.000.009.023",,,,
 SWR-001528,"Firmware Version[major]",false,"0",,,,,,,"CPU firmware Major version number in hex. (ex:  0x0100 =  major version 1.0)",,,,
