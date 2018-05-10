@@ -241,9 +241,9 @@ DI-0.1.6.12,"Heatec ESD1",false,"False",,,,,,,,false,false,"False",false,"DI-0.1
 DI-0.1.6.14,"Heatec HET1",false,"False",,,,,,,,false,false,"False",false,"DI-0.1.6.14","DI",,false,
 DI-0.1.6.13,"Heatec SCRA1",false,"False",,,,,,,,false,false,"False",false,"DI-0.1.6.13","DI",,false,
 DO-0.1.4.2,"Heatec_Call_for_Heat",false,"False",,,,,,,,false,false,"False",false,"DO-0.1.4.2","DO",,false,
-DI-0.1.5.6,"Heatec_HE1",false,"False",,,,,,,,false,false,"False",false,"DI-0.1.5.6","DI",,false,
+DI-0.1.5.6,"Heatec_HE1",false,"False",100009,100009,,,,,,false,false,"False",false,"DI-0.1.5.6","DI",,false,
 DO-0.1.3.15,"Heatec_RESD",false,"False",,,,,,,,false,false,"False",false,"DO-0.1.3.15","DO",,false,
-C-000057,"Heater-Ready",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
+C-000057,"Heater-Ready",false,"False",000004,000004,,,,,,false,false,"False",false,,"C",,false,
 F32-000055,"Heater-SETPOINT",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 C-000123,"Heater-ShutdownComplete",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 AR1F32-000003,"Heater-ShutdownSetpoint()",FALSE,,,,,,3,,,,,,false,,"AR1F32",,
@@ -490,46 +490,12 @@ C-000055,"MassInv-Loop Timer Complete",false,"False",,,,,,,,false,false,"False",
 S32-000041,"MassInv-Loop Tuned Delay csec",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 C-000074,"MassInv-ReadyForCompressor",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000146,"MassInv-Removing",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
-F32-000012,"MassInv-RollingFlowMax",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000013,"MassInv-RollingFlowMin",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000014,"MassInv-RollingFlowRange",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-AR1F32-000004,"MassInv-RollingFlowRates()",FALSE,,,,,,30,,,,,,false,,"AR1F32",,
-AR1F32-000004(1),"MassInv-RollingFlowRates(1)",FALSE,"0.0",,,,,30,,,,,,false,,"AR1F32",,false
-AR1F32-000004(2),"MassInv-RollingFlowRates(2)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(3),"MassInv-RollingFlowRates(3)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(4),"MassInv-RollingFlowRates(4)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(5),"MassInv-RollingFlowRates(5)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(6),"MassInv-RollingFlowRates(6)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(7),"MassInv-RollingFlowRates(7)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(8),"MassInv-RollingFlowRates(8)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(9),"MassInv-RollingFlowRates(9)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(10),"MassInv-RollingFlowRates(10)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(11),"MassInv-RollingFlowRates(11)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(12),"MassInv-RollingFlowRates(12)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(13),"MassInv-RollingFlowRates(13)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(14),"MassInv-RollingFlowRates(14)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(15),"MassInv-RollingFlowRates(15)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(16),"MassInv-RollingFlowRates(16)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(17),"MassInv-RollingFlowRates(17)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(18),"MassInv-RollingFlowRates(18)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(19),"MassInv-RollingFlowRates(19)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(20),"MassInv-RollingFlowRates(20)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(21),"MassInv-RollingFlowRates(21)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(22),"MassInv-RollingFlowRates(22)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(23),"MassInv-RollingFlowRates(23)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(24),"MassInv-RollingFlowRates(24)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(25),"MassInv-RollingFlowRates(25)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(26),"MassInv-RollingFlowRates(26)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(27),"MassInv-RollingFlowRates(27)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(28),"MassInv-RollingFlowRates(28)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(29),"MassInv-RollingFlowRates(29)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000004(30),"MassInv-RollingFlowRates(30)",FALSE,"0.0",,,,,,,,,,,false,,"AR1F32",,false
 C-000062,"MassInv-ShutdownComplete",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000060,"MassInv-ShutdownTimer",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 C-000063,"MassInv-ShutdownValvesSet",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000061,"MassInv-ShuttingDown",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 F32-000010,"MassInv-Target Bias barg",false,"0.0",400033,400034,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000005,"MassInv-Target Pressure barg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000005,"MassInv-Target Pressure barg",false,"0.0",400077,400078,,,,,,false,false,"0.0",false,,"F32",,false,
 C-000068,"MassInv-Target bias finished",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000064,"MassInv-Target bias time",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 F32-000060,"MassInv-TargetLowerLimit",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
@@ -585,22 +551,22 @@ SWRW-000251,"Number of Critical Errors",false,"0",,,,,,,"number of critical erro
 SWRW-000252,"Number of Non-critical Errors",false,"0",,,,,,,"number of noncritical errors",,,,false,,"SWRW",,false,
 F32-000074,"PM_ACC1_L-L_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000075,"PM_ACC1_L-N_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000076,"PM_ACC1_Power Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000076,"PM_ACC1_Power Avg",false,"0.0",400069,400070,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000077,"PM_ACC2_L-L_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000078,"PM_ACC2_L-N_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000079,"PM_ACC2_Power_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000079,"PM_ACC2_Power_Avg",false,"0.0",400071,400072,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000080,"PM_Comp_L-L_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000081,"PM_Comp_L-N_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000082,"PM_Comp_Power_Avg",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000083,"PM_EXP_HZ",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000084,"PM_EXP_L1_AMPS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000085,"PM_EXP_L1_VOLTS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000086,"PM_EXP_L2_AMPS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000087,"PM_EXP_L2_VOLTS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000088,"PM_EXP_L3_AMPS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000089,"PM_EXP_L3_VOLTS",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000090,"PM_EXP_PF",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-F32-000091,"PM_EXP_PWR",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000082,"PM_Comp_Power_Avg",false,"0.0",400073,400074,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000083,"PM_EXP_HZ",false,"0.0",400051,400052,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000084,"PM_EXP_L1_AMPS",false,"0.0",400053,400054,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000085,"PM_EXP_L1_VOLTS",false,"0.0",400055,400056,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000086,"PM_EXP_L2_AMPS",false,"0.0",400057,400058,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000087,"PM_EXP_L2_VOLTS",false,"0.0",400059,400060,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000088,"PM_EXP_L3_AMPS",false,"0.0",400061,400062,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000089,"PM_EXP_L3_VOLTS",false,"0.0",400063,400064,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000090,"PM_EXP_PF",false,"0.0",400065,400066,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000091,"PM_EXP_PWR",false,"0.0",400067,400068,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000015,"PT001_ACC1in-PSI",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000027,"PT001_ACC1in-barg",false,"0.0",400005,400006,,,,,,false,false,"0.0",false,,"F32",,false,
 AIS32-0.1.8.1,"PT001_ACC1in-int32",false,"0",,,,,,,,false,false,"0",false,"AIS32-0.1.8.1","AIS32",,false,
@@ -680,7 +646,7 @@ C-000143,"Screen-ClearAlarm",false,"False",,,,,,,,false,false,"False",false,,"C"
 C-000136,"Screen-Compressor Prepared",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000121,"Screen-CompressorOn",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000137,"Screen-CompressorShutdownRdy",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
-C-000082,"Screen-ExpanderReady",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
+C-000082,"Screen-ExpanderReady",false,"False",000005,000005,,,,,,false,false,"False",false,,"C",,false,
 C-000087,"Screen-Permissives Err 1",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000088,"Screen-Permissives Err 2",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000051,"Screen-Perms not met done",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
@@ -688,7 +654,7 @@ C-000138,"Screen-Perms not met skip",false,"False",,,,,,,,false,false,"False",fa
 S32-000034,"Screen-Perms not met timer",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 C-000084,"Screen-ReturnToBaseScreen",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 BCD16-000001,"Screen-Screen Number",false,"1",,,,,,,,false,false,"0",false,,"BCD16",,false,
-C-000135,"Screen-Startup EVs Open",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
+C-000135,"Screen-Startup EVs Open",false,"False",000006,000006,,,,,,false,false,"False",false,,"C",,false,
 C-000050,"Screen-Startup perms not met",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000080,"Screen-TE007>34",true,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000032,"Shutdown-Complete",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
@@ -711,7 +677,7 @@ C-000019,"Shutdown-P4-Complete",false,"False",,,,,,,,false,false,"False",false,,
 C-000022,"Shutdown-P4-End",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000018,"Shutdown-Started",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000004,"Shutdown-Timer",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
-F32-000063,"Subcooling degC",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000063,"Subcooling degC",false,"0.0",400075,400076,,,,,,false,false,"0.0",false,,"F32",,false,
 SBR-001010,"Switch in Run Bit",false,"False",,,,,,,"On if CPU Switch is up (Run)",,,,false,,"SBR",,false,
 SBR-001011,"Switch in Stop Bit",false,"False",,,,,,,"On if CPU Switch is down (Stop)",,,,false,,"SBR",,false,
 C-000040,"Sys Transient Stable",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
