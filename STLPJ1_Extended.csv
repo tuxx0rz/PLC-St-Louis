@@ -199,9 +199,9 @@ F32-000045,"Compressor-CurrentMassFlow kg/m",false,"0.0",400043,400044,,,,,,fals
 F32-000056,"Compressor-CurrentMassFlow kg/s",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000141,"Compressor-CurrentMassFlow test",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000057,"Compressor-FLOW VERIF MIN kg/s",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-AR1F32-000005,"Compressor-Flow Set Point Limits()",FALSE,,400047,400048,,,2,,,,,,false,,"AR1F32",,
-AR1F32-000005(1),"Compressor-Flow Set Point Limits(1)",FALSE,"0.0",400049,400050,,,2,,,,,,false,,"AR1F32",,false
-AR1F32-000005(2),"Compressor-Flow Set Point Limits(2)",FALSE,"0.0",400050,400050,,,,,,,,,false,,"AR1F32",,false
+AR1F32-000005,"Compressor-Flow Set Point Limits()",FALSE,,400047,400050,,,2,,,,,,false,,"AR1F32",,
+AR1F32-000005(1),"Compressor-Flow Set Point Limits(1)",FALSE,"0.0",400047,400048,,,2,,,,,,false,,"AR1F32",,false
+AR1F32-000005(2),"Compressor-Flow Set Point Limits(2)",FALSE,"0.0",400049,400050,,,,,,,,,false,,"AR1F32",,false
 AOS32-0.1.2.1,"Compressor-Flow Set Point int32",false,"0",,,,,,,,false,false,"0",false,"AOS32-0.1.2.1","AOS32",,false,
 F32-000073,"Compressor-Flow Set Point kg/m",false,"0.0",400045,400046,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000009,"Compressor-Flow Set Point kg/s",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
@@ -394,7 +394,9 @@ C-000245,"LB-5kW-Control-Used",false,"False",,,,,,,,false,false,"False",false,,"
 US16-000027,"LB-Control-MB",false,"0",,,,,,,,false,false,"0",false,,"US16",,false,
 C-000237,"LB-Control-Reset",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 F32-000126,"LB-Exp-RPM",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000143,"LB-Exp-Voltage-Offset",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000127,"LB-Exp-kW-Current",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
+F32-000142,"LB-Exp-kW-Current-To-Load",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000128,"LB-Exp-kW-Remaining",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000130,"LB-Exp-kW-Remaining-S1",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000139,"LB-Exp-kW-Remaining-S10",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
@@ -407,6 +409,7 @@ F32-000136,"LB-Exp-kW-Remaining-S7",false,"0.0",,,,,,,,false,false,"0.0",false,,
 F32-000137,"LB-Exp-kW-Remaining-S8",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 F32-000138,"LB-Exp-kW-Remaining-S9",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 C-000254,"LB-Fan-Control-Used",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
+C-000273,"LB-Load-Offset-S1",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000253,"LB-Load-Present",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000255,"LB-Load/Unload-Control-Used",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 C-000225,"LB-Processing",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
@@ -736,10 +739,10 @@ F32-000005,"MassInv-Target Pressure barg",false,"0.0",400077,400078,,,,,,false,f
 C-000068,"MassInv-Target bias finished",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000064,"MassInv-Target bias time",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
 F32-000060,"MassInv-TargetLowerLimit",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
-AR1F32-000002,"MassInv-TargetPrsr Limits barg()",FALSE,,400035,400036,,,3,,,,,,false,,"AR1F32",,
-AR1F32-000002(1),"MassInv-TargetPrsr Limits barg(1)",FALSE,"0.0",400037,400038,,,3,,,,,,false,,"AR1F32",,false
-AR1F32-000002(2),"MassInv-TargetPrsr Limits barg(2)",FALSE,"0.0",400039,400040,,,,,,,,,false,,"AR1F32",,false
-AR1F32-000002(3),"MassInv-TargetPrsr Limits barg(3)",FALSE,"0.0",400040,400040,,,,,,,,,false,,"AR1F32",,false
+AR1F32-000002,"MassInv-TargetPrsr Limits barg()",FALSE,,400035,400040,,,3,,,,,,false,,"AR1F32",,
+AR1F32-000002(1),"MassInv-TargetPrsr Limits barg(1)",FALSE,"0.0",400035,400036,,,3,,,,,,false,,"AR1F32",,false
+AR1F32-000002(2),"MassInv-TargetPrsr Limits barg(2)",FALSE,"0.0",400037,400038,,,,,,,,,false,,"AR1F32",,false
+AR1F32-000002(3),"MassInv-TargetPrsr Limits barg(3)",FALSE,"0.0",400039,400040,,,,,,,,,false,,"AR1F32",,false
 F32-000061,"MassInv-TargetUpperLimit",false,"0.0",,,,,,,,false,false,"0.0",false,,"F32",,false,
 C-000099,"MassInv-ValveOpenDone",false,"False",,,,,,,,false,false,"False",false,,"C",,false,
 S32-000080,"MassInv-ValveOpenTimer",false,"0",,,,,,,,false,false,"0",false,,"S32",,false,
