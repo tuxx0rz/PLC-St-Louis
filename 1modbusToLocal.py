@@ -23,7 +23,7 @@ def main():
 
     #loop process of reading and inserting into SQL table
     while True:
-        #read and interpret HOLDING COILS (0XXXXX)
+        #read and interpret HOLDING COILS (0XXXXX) [binary memory]
         holdingCoils = ModbusCnxn.read_coils(0, 125)
         
         SystemIsOn = holdingCoils.bits[0]
@@ -34,7 +34,7 @@ def main():
         Expander_EVsOpen = holdingCoils.bits[5]
         
         
-        #read and interpret INPUT COILS (1XXXXX)
+        #read and interpret INPUT COILS (1XXXXX) [binary input]
         inputCoils = ModbusCnxn.read_discrete_inputs(0, 125)
         
         MOV001isOpen = not inputCoils.bits[0]
@@ -48,7 +48,7 @@ def main():
         Heater_ElementOn = inputCoils.bits[8]
 
         
-        #read and interpret INPUT REGISTERS (3XXXXX)
+        #read and interpret INPUT REGISTERS (3XXXXX) [16-bit input]
         inputRegisters = ModbusCnxn.read_input_registers(0, 125)
         
         TE001 = wordToFloat(inputRegisters.getRegister(0), inputRegisters.getRegister(1))
@@ -67,7 +67,7 @@ def main():
         TE016 = wordToFloat(inputRegisters.getRegister(26), inputRegisters.getRegister(27))
 
         
-        #read and interpret HOLDING REGISTERS (4XXXXX)
+        #read and interpret HOLDING REGISTERS (4XXXXX) [16-bit memory]
         holdingRegisters = ModbusCnxn.read_holding_registers(0, 125)
         
         TE004 = wordToFloat(holdingRegisters.getRegister(0), holdingRegisters.getRegister(1))

@@ -63,8 +63,6 @@ def main():
             print(row[0], "remote row inserted")
 
         SQLCloudCnxn.commit()
-        
-        sleep(2)
 
 if __name__ == '__main__':
     main()
