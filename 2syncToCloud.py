@@ -6,7 +6,7 @@ import ctypes
 
 def main():
 
-    MAXROWS = 1000; #maximum number of rows to transfer per connection / commit
+    MAXROWS = 100; #maximum number of rows to transfer per connection / commit
 
     #set window title
     ctypes.windll.kernel32.SetConsoleTitleA("2syncToCloud.py")
