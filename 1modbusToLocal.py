@@ -109,6 +109,28 @@ def main():
         PM_Comp_Power_Avg = wordToFloat(holdingRegisters.getRegister(72), holdingRegisters.getRegister(73))
         Subcooling = wordToFloat(holdingRegisters.getRegister(74), holdingRegisters.getRegister(75))
         MassInv_TargetPressure = wordToFloat(holdingRegisters.getRegister(76), holdingRegisters.getRegister(77))
+        LB_Log_P1_Amps = wordToFloat(holdingRegisters.getRegister(78), holdingRegisters.getRegister(79))
+        LB_Log_P2_Amps = wordToFloat(holdingRegisters.getRegister(80), holdingRegisters.getRegister(81))
+        LB_Log_P3_Amps = wordToFloat(holdingRegisters.getRegister(82), holdingRegisters.getRegister(83))
+        LB_Log_Avg_Amps = wordToFloat(holdingRegisters.getRegister(84), holdingRegisters.getRegister(85))
+        LB_Log_Avg_Line_Volts = wordToFloat(holdingRegisters.getRegister(86), holdingRegisters.getRegister(87))
+        LB_Log_L1_Volts = wordToFloat(holdingRegisters.getRegister(88), holdingRegisters.getRegister(89))
+        LB_Log_L2_Volts = wordToFloat(holdingRegisters.getRegister(90), holdingRegisters.getRegister(91))
+        LB_Log_L3_Volts = wordToFloat(holdingRegisters.getRegister(92), holdingRegisters.getRegister(93))
+        LB_Log_Avg_Phase_Volts = wordToFloat(holdingRegisters.getRegister(94), holdingRegisters.getRegister(95))
+        LB_Log_L1_Active_Power = wordToFloat(holdingRegisters.getRegister(96), holdingRegisters.getRegister(97))
+        LB_Log_L2_Active_Power = wordToFloat(holdingRegisters.getRegister(98), holdingRegisters.getRegister(99))
+        LB_Log_L3_Active_Power = wordToFloat(holdingRegisters.getRegister(100), holdingRegisters.getRegister(101))
+        LB_Log_Total_Active_Power = wordToFloat(holdingRegisters.getRegister(102), holdingRegisters.getRegister(103))
+        LB_Log_L1_Apparent_Power = wordToFloat(holdingRegisters.getRegister(104), holdingRegisters.getRegister(105))
+        LB_Log_L2_Apparent_Power = wordToFloat(holdingRegisters.getRegister(106), holdingRegisters.getRegister(107))
+        LB_Log_L3_Apparent_Power = wordToFloat(holdingRegisters.getRegister(108), holdingRegisters.getRegister(109))
+        LB_Log_Total_Apparent_Power = wordToFloat(holdingRegisters.getRegister(110), holdingRegisters.getRegister(111))
+        LB_Log_L1_Power_Factor = wordToFloat(holdingRegisters.getRegister(112), holdingRegisters.getRegister(113))
+        LB_Log_L2_Power_Factor = wordToFloat(holdingRegisters.getRegister(114), holdingRegisters.getRegister(115))
+        LB_Log_L3_Power_Factor = wordToFloat(holdingRegisters.getRegister(116), holdingRegisters.getRegister(117))
+        LB_Log_Total_Power_Factor = wordToFloat(holdingRegisters.getRegister(118), holdingRegisters.getRegister(119))
+        LB_Log_Frequency = wordToFloat(holdingRegisters.getRegister(120), holdingRegisters.getRegister(121))
         
         
         #generate query and insert into SQL Table
@@ -126,13 +148,21 @@ def main():
                     "PM_EXP_HZ, PM_EXP_L1_AMPS, PM_EXP_L1_VOLTS, PM_EXP_L2_AMPS, " \
                     "PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PM_EXP_L3_VOLTS, PM_EXP_PF, " \
                     "PM_EXP_PWR, PM_ACC1_Power_Avg, PM_ACC2_Power_Avg, " \
-                    "PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure) " \
+                    "PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure, LB_Log_P1_Amps, " \
+                    "LB_Log_P2_Amps, LB_Log_P3_Amps, LB_Log_Avg_Amps, LB_Log_Avg_Line_Volts, " \
+                    "LB_Log_L1_Volts, LB_Log_L2_Volts, LB_Log_L3_Volts, LB_Log_Avg_Phase_Volts, " \
+                    "LB_Log_L1_Active_Power, LB_Log_L2_Active_Power, LB_Log_L3_Active_Power, " \
+                    "LB_Log_Total_Active_Power, LB_Log_L1_Apparent_Power, LB_Log_L2_Apparent_Power, " \
+                    "LB_Log_L3_Apparent_Power, LB_Log_Total_Apparent_Power, LB_Log_L1_Power_Factor, " \
+                    "LB_Log_L2_Power_Factor, LB_Log_L3_Power_Factor, LB_Log_Total_Power_Factor, " \
+                    "LB_Log_Frequency) " \
                     "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
-                           "%s,%s,%s,%s)"
-        #68 vals
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        #90 vals
         args = (SystemIsOn, MassInv_Active, Compressor_Active,
                     Heater_Ready, Expander_Ready, Expander_EVsOpen, MOV001isOpen,
                     MOV002isOpen, MOV003isOpen, MOV004isOpen, MOV005isOpen,
@@ -147,7 +177,14 @@ def main():
                     PM_EXP_HZ, PM_EXP_L1_AMPS, PM_EXP_L1_VOLTS, PM_EXP_L2_AMPS,
                     PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PM_EXP_L3_VOLTS, PM_EXP_PF,
                     PM_EXP_PWR, PM_ACC1_Power_Avg, PM_ACC2_Power_Avg,
-                    PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure)
+                    PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure, LB_Log_P1_Amps,
+                    LB_Log_P2_Amps, LB_Log_P3_Amps, LB_Log_Avg_Amps, LB_Log_Avg_Line_Volts,
+                    LB_Log_L1_Volts, LB_Log_L2_Volts, LB_Log_L3_Volts, LB_Log_Avg_Phase_Volts,
+                    LB_Log_L1_Active_Power, LB_Log_L2_Active_Power, LB_Log_L3_Active_Power,
+                    LB_Log_Total_Active_Power, LB_Log_L1_Apparent_Power, LB_Log_L2_Apparent_Power,
+                    LB_Log_L3_Apparent_Power, LB_Log_Total_Apparent_Power, LB_Log_L1_Power_Factor,
+                    LB_Log_L2_Power_Factor, LB_Log_L3_Power_Factor, LB_Log_Total_Power_Factor,
+                    LB_Log_Frequency)
         
         SQLCursor.execute(query, args)
         

@@ -58,7 +58,8 @@ def main():
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
-                           "%s,%s,%s,%s,%s,%s)"
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             SQLCloudCursor.execute(query, row)
             print(row[0], "remote row inserted")
 
