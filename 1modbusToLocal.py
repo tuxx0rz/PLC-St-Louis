@@ -198,7 +198,10 @@ def main():
         except Error as error:
             print(error)
 
-        sleep(0.5)
+        if (SystemIsOn):
+            sleep(0.5)
+        else:
+            sleep(5)
 
 
 def wordToFloat(word1, word2):

@@ -65,5 +65,8 @@ def main():
 
         SQLCloudCnxn.commit()
 
+        if (row[2] == 0):
+            sleep(5)
+
 if __name__ == '__main__':
     main()
