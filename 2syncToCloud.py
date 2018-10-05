@@ -45,12 +45,12 @@ def main():
             keyDiff = MAXROWS;
             localKey = remoteKey + MAXROWS
 
-        print("syncing rows %s through %s..." % (remoteKey, localKey))
+        #print("syncing rows %s through %s..." % (remoteKey, localKey))
         
         query = "SELECT * FROM logdata WHERE `key` > %s AND `key` <= %s ORDER BY `key` DESC LIMIT %s"
         SQLLocalCursor.execute(query, (remoteKey, localKey, keyDiff,))
         newRows = SQLLocalCursor.fetchall()
-        print("got %s new rows" % keyDiff)
+        #print("got %s new rows" % keyDiff)
 
         for row in reversed(newRows):
             query = "INSERT INTO logdata " \
