@@ -6,6 +6,9 @@ import ctypes
 
 
 def main():
+
+    runCount = 0
+    
     #set window title
     ctypes.windll.kernel32.SetConsoleTitleA("1modbusToLocal.py")
     
@@ -101,8 +104,8 @@ def main():
         PM_EXP_L2_AMPS = wordToFloat(holdingRegisters.getRegister(56), holdingRegisters.getRegister(57))
         PM_EXP_L2_VOLTS = wordToFloat(holdingRegisters.getRegister(58), holdingRegisters.getRegister(59))
         PM_EXP_L3_AMPS = wordToFloat(holdingRegisters.getRegister(60), holdingRegisters.getRegister(61))
-        PM_EXP_L3_VOLTS = wordToFloat(holdingRegisters.getRegister(62), holdingRegisters.getRegister(63))
-        PM_EXP_PF = wordToFloat(holdingRegisters.getRegister(64), holdingRegisters.getRegister(65))
+        PT005 = wordToFloat(holdingRegisters.getRegister(62), holdingRegisters.getRegister(63))
+        Net_Power = wordToFloat(holdingRegisters.getRegister(64), holdingRegisters.getRegister(65))
         PM_EXP_PWR = wordToFloat(holdingRegisters.getRegister(66), holdingRegisters.getRegister(67))
         PM_ACC1_Power_Avg = wordToFloat(holdingRegisters.getRegister(68), holdingRegisters.getRegister(69))
         PM_ACC2_Power_Avg = wordToFloat(holdingRegisters.getRegister(70), holdingRegisters.getRegister(71))
@@ -146,7 +149,7 @@ def main():
                     "Compressor_Density, Compressor_CurrentFlow, Compressor_FlowSetPt, " \
                     "Compressor_FlowSetPtLimitLO, Compressor_FlowSetPtLimitHI, " \
                     "PM_EXP_HZ, PM_EXP_L1_AMPS, PM_EXP_L1_VOLTS, PM_EXP_L2_AMPS, " \
-                    "PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PM_EXP_L3_VOLTS, PM_EXP_PF, " \
+                    "PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PT005, Net_Power, " \
                     "PM_EXP_PWR, PM_ACC1_Power_Avg, PM_ACC2_Power_Avg, " \
                     "PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure, LB_Log_P1_Amps, " \
                     "LB_Log_P2_Amps, LB_Log_P3_Amps, LB_Log_Avg_Amps, LB_Log_Avg_Line_Volts, " \
@@ -175,7 +178,7 @@ def main():
                     Compressor_Density, Compressor_CurrentFlow, Compressor_FlowSetPt,
                     Compressor_FlowSetPtLimitLO, Compressor_FlowSetPtLimitHI,
                     PM_EXP_HZ, PM_EXP_L1_AMPS, PM_EXP_L1_VOLTS, PM_EXP_L2_AMPS,
-                    PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PM_EXP_L3_VOLTS, PM_EXP_PF,
+                    PM_EXP_L2_VOLTS, PM_EXP_L3_AMPS, PT005, Net_Power,
                     PM_EXP_PWR, PM_ACC1_Power_Avg, PM_ACC2_Power_Avg,
                     PM_Comp_Power_Avg, Subcooling, MassInv_TargetPressure, LB_Log_P1_Amps,
                     LB_Log_P2_Amps, LB_Log_P3_Amps, LB_Log_Avg_Amps, LB_Log_Avg_Line_Volts,
@@ -188,20 +191,32 @@ def main():
         
         SQLCursor.execute(query, args)
         
+
+        
+
+            
         try:
             if SQLCursor.lastrowid:
                 print(SQLCursor.lastrowid, "local row inserted")
+                if (runCount % 900 == 0):
+                    #(every 15 min or (less?))
+                    #prune db of anything older than 2 days from right now
+                    query = "DELETE FROM logdata WHERE timestamp < SUBDATE(NOW(), 2)"
+                    SQLCursor.execute(query)
+                    print("==x=x=x==  local logdata pruned")
             else:
                 print("last insert id not found!")
      
             SQLCnxn.commit()
-        except Error as error:
-            print(error)
+        except:
+            print("There was an error")
 
         if (SystemIsOn):
             sleep(0.5)
         else:
             sleep(5)
+
+        runCount+=1
 
 
 def wordToFloat(word1, word2):

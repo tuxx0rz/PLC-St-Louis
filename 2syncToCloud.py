@@ -10,6 +10,8 @@ def main():
 
     #set window title
     ctypes.windll.kernel32.SetConsoleTitleA("2syncToCloud.py")
+
+    runCount = 0
     
     #loop process of reading and inserting into SQL table
     while True:
@@ -53,6 +55,7 @@ def main():
         #print("got %s new rows" % keyDiff)
 
         for row in reversed(newRows):
+            #add row to full db
             query = "INSERT INTO logdata " \
                     "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
@@ -61,12 +64,33 @@ def main():
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
                            "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             SQLCloudCursor.execute(query, row)
-            print(row[0], "remote row inserted")
+            print(row[0], "logdata row inserted")
+            
+            #add row to live (small) db
+            query = "INSERT INTO logdata_live " \
+                    "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, " \
+                           "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            SQLCloudCursor.execute(query, row)
+            print(row[0], "logdata_live row inserted")
+            updated = True;
+
+        if (runCount % 900 == 0):
+            #(every 15 min or (less?))
+            #prune live db of anything older than 2 days from right now
+            query = "DELETE FROM logdata_live WHERE ts < SUBDATE(NOW(), 2)"
+            SQLCloudCursor.execute(query)
+            print("==x=x=x==  logdata_live pruned")
 
         SQLCloudCnxn.commit()
 
         if (row[2] == 0):
             sleep(1)
+
+        runCount+=1
 
 if __name__ == '__main__':
     main()
